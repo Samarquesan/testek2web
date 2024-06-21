@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 25px;
+}
+
+main{
+    background-color: #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.525);
+    box-shadow: 1px 1px 1px 1px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.entradas{
+    display: flex;
+    flex-wrap: wrap;
+}
+.arquivosForm{
+    margin-bottom: 20px;
+}
+.arquivosForm label, .arquivosForm input, .arquivosForm textarea{
+    display: block;
+    flex-wrap: 10px 0;
+}
+.arquivosForm input[type="file"]{
+    margin-top: 5px;
+}
+.arquivoInserido{
+   width: 200px;
+   margin: 10px;
+   border: 1px solid #ccc;
+   padding: 10px;
+}
+.arquivoInserido img, .arquivoInserido video{
+    max-width: 100%;
+    height: auto;
+}
