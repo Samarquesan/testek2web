@@ -8,15 +8,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+   
     <header>
         <h1>Gerenciador de Arquivos</h1>
         <p>Faça o upload de suas imagens e vídeos facilmente.</p>
     </header>
     <main>
         
-            <form class="arquivosForm" action="script.php" method="post" enctype="multipart/form-data">
+            <form id="arquivosForm" action="./script.php" method="post" enctype="multipart/form-data">
                 <label for="arquivo">Insira uma imagem ou arquivo de vídeo:</label>
-                <input type="file" name="arquivo" id="arquivo" accept="audio/*,video/*" required>
+                <input type="file" name="arquivo" id="arquivo" required>
         
                 <label for="datalhesArquivo">Descrição do arquivo inserido:</label>
                 <textarea name="datalhesArquivo" id="datalhesArquivo" rows="5" required></textarea>
@@ -28,7 +29,7 @@
             <div class="entradas"></div>
     </main>
 
-    <script src="frontend.js"></script>
-    <script src="arquivos.php"></script>
+    <script src="./frontend.js"></script>
+    
 </body>
 </html>

@@ -1,9 +1,10 @@
 $(document).ready(function() {
-    $('.arquivosForm').addEventListener('submit', function(e) {
+    $('#arquivosForm').on('submit', function(e) {
         e.preventDefault(); 
-
+        
         const formData = new FormData(this);
-
+        $(this).attr('method');
+        console.log($(this).attr('method'));
         $.ajax({
             url: $(this).attr('action'),
             type: $(this).attr('method'),
@@ -15,7 +16,7 @@ $(document).ready(function() {
             },
             success: function(response) {
                 $('.feedback').html(response).removeClass('loading').addClass('success');
-                loadFiles(); 
+                // loadFiles(); 
             },
             error: function() {
                 $('.feedback').html('Ocorreu um erro ao enviar o arquivo.').removeClass('loading').addClass('error');
@@ -24,12 +25,12 @@ $(document).ready(function() {
     });
 
     
-    loadFiles();
+    // loadFiles();
 });
 
 function loadFiles() {
     $.ajax({
-        url: 'arquivos.php',
+        url: 'script.php',
         method: 'GET',
         success: function(response) {
             $('.entradas').html(response);
